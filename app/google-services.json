@@ -1,0 +1,58 @@
+{
+  "project_info": {
+    "project_number": "288910315428",
+    "firebase_url": "https://pharmd-94d2e.firebaseio.com",
+    "project_id": "pharmd-94d2e",
+    "storage_bucket": "pharmd-94d2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288910315428:android:59dd115ff569e46c",
+        "android_client_info": {
+          "package_name": "com.example.bishoysefin.pharmd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "288910315428-np7p1muec5bngvh67s5eam28lk3qs870.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bishoysefin.pharmd",
+            "certificate_hash": "b9d303120599d9f253706b25d0600109fee6e94b"
+          }
+        },
+        {
+          "client_id": "288910315428-6s2k6l300gal7hs07qcu7j0jpg7lekds.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4PRbIA6jB5-1MoSb8BlX4HqtzO0KvyAU"
+        },
+        {
+          "current_key": "AIzaSyC4PRbIA6jB5-1MoSb8BlX4HqtzO0KvyAU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "288910315428-6s2k6l300gal7hs07qcu7j0jpg7lekds.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
