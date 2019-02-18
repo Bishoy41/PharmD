@@ -27,7 +27,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
     ProgressBar progBar;
     EditText signUpEmail, signUpPassword, signUpPasswordConfirm, firstName, lastName, phoneNumber;
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
 
 
     @Override

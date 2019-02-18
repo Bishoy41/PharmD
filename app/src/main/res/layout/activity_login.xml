@@ -60,16 +60,15 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="Login"
-        android:textColor="#000"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:background="@drawable/shapelogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="@drawable/shapelogin"
+        android:padding="10dp"
+        android:text="Login"
+        android:textColor="#000" />
     <Button
         android:id="@+id/button2"
         android:layout_alignParentLeft="false"

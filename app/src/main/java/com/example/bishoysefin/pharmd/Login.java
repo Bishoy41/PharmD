@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
-import android.view.accessibility.AccessibilityManager;
 import android.widget.EditText;
 import android.support.annotation.NonNull;
 import android.widget.ProgressBar;
@@ -18,8 +17,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-
+import com.google.firebase.FirebaseApp;
 
 
 public class Login extends AppCompatActivity implements View.OnClickListener{
@@ -34,8 +32,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
-
         mAuth = FirebaseAuth.getInstance();
 
 
