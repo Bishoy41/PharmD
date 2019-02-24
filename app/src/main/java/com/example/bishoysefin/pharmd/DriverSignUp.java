@@ -2,7 +2,6 @@ package com.example.bishoysefin.pharmd;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Process;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Patterns;
@@ -54,7 +53,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button4:
-                startActivity(new Intent(this, Login.class));
+                startActivity(new Intent(this, DriverLogin.class));
                 break;
 
             case R.id.button3:
@@ -119,7 +118,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                     .setValue(user);
-                            startActivity(new Intent(SignUp.this, Login.class));
+                            startActivity(new Intent(SignUp.this, DriverLogin.class));
 
 
                         }

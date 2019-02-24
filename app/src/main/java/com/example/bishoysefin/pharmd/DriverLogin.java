@@ -17,10 +17,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.FirebaseApp;
 
 
-public class Login extends AppCompatActivity implements View.OnClickListener{
+public class UserLogin extends AppCompatActivity implements View.OnClickListener{
 
     FirebaseAuth mAuth;
     EditText userEmail, userPassword;
@@ -31,7 +30,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_userlogin);
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -57,7 +56,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             progBar.setVisibility(View.GONE);
-                            startActivity(new Intent(Login.this, MainActivity.class));
+                            startActivity(new Intent(UserLogin.this, main.class));
+                            finish();
+                            return;
 
                         } else {
                             progBar.setVisibility(View.GONE);
@@ -105,7 +106,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
 
             case R.id.button2:
-                startActivity(new Intent(Login.this, SignUp.class));
+                startActivity(new Intent(UserLogin.this, SignUp.class));
 
                 break;
 
