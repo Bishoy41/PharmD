@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
@@ -22,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
  * Created by bishoysefin on 2018-09-12.
  */
 
-public class SignUp extends AppCompatActivity implements View.OnClickListener{
+public class DriverSignUp extends AppCompatActivity implements View.OnClickListener{
 
     ProgressBar progBar;
     EditText signUpEmail, signUpPassword, signUpPasswordConfirm, firstName, lastName, phoneNumber;
@@ -32,7 +33,7 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        setContentView(R.layout.activity_driversignup);
         mAuth = FirebaseAuth.getInstance();
 
         findViewById(R.id.button3).setOnClickListener(this);
@@ -115,10 +116,14 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
                             mAuth.getCurrentUser().sendEmailVerification();
                             User user = new User(fname, lname, email, phone);
 
-                            FirebaseDatabase.getInstance().getReference("Users")
-                                    .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                                    .setValue(user);
-                            startActivity(new Intent(SignUp.this, DriverLogin.class));
+                            String user_id = mAuth.getCurrentUser().getUid();
+                            DatabaseReference current_user_db = FirebaseDatabase.getInstance().getReference().child("Users").child("Drivers").child(user_id);
+                            current_user_db.setValue(true);
+
+
+                            startActivity(new Intent(DriverSignUp.this, DriverLogin.class));
+                            finish();
+                            return;
 
 
                         }

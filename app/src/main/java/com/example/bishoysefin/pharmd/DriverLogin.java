@@ -19,7 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class UserLogin extends AppCompatActivity implements View.OnClickListener{
+public class DriverLogin extends AppCompatActivity implements View.OnClickListener{
 
     FirebaseAuth mAuth;
     EditText userEmail, userPassword;
@@ -30,7 +30,7 @@ public class UserLogin extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_userlogin);
+        setContentView(R.layout.activity_driverlogin);
         mAuth = FirebaseAuth.getInstance();
 
 
@@ -56,7 +56,7 @@ public class UserLogin extends AppCompatActivity implements View.OnClickListener
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             progBar.setVisibility(View.GONE);
-                            startActivity(new Intent(UserLogin.this, main.class));
+                            startActivity(new Intent(DriverLogin.this, DriverMap.class));
                             finish();
                             return;
 
@@ -106,7 +106,7 @@ public class UserLogin extends AppCompatActivity implements View.OnClickListener
 
 
             case R.id.button2:
-                startActivity(new Intent(UserLogin.this, SignUp.class));
+                startActivity(new Intent(DriverLogin.this, DriverSignUp.class));
 
                 break;
 

@@ -13,9 +13,9 @@ import android.support.v7.app.AppCompatActivity;
 public class SplashActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout);
+        setContentView(R.layout.activity_splash);
 
-        startActivity(new Intent(this, Login.class));
+        startActivity(new Intent(this, DriverLogin.class));
 
     }
 }
